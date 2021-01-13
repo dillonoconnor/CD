@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <%= form_with model: @word, local: true do |f| %>
+        <div class="level">
+          <div class="level-left is-flex-grow-1">
+            <div class="field is-flex-grow-1">
+              <%= f.label :search_term, class: "label has-text-white" %>
+              <%= f.text_field :search_term, class: "input", autofocus: true %>
+            </div>
+          </div>
+          <div class="level-right is-align-self-flex-end pl-5">
+            <div class="field">
+              <%= f.submit "Search", class: "button is-link" %>  
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+

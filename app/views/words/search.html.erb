@@ -1,0 +1,38 @@
+<section class="section">
+  <% if @result.empty? %>
+    <p class="has-text-white is-size-4">No matches found.</p>
+  <% else %>
+    <div class="block">
+      <p class="has-text-white is-size-4">Results for "<%= @word %>":</p>
+    </div>
+    <% @result.each do |r| %>
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <p class="title"><%= r.simplified %></p>
+          <p class="subtitle"><%= r.pinyin %></p>
+        </div>
+        <div class="media-content">
+          <table class="table">
+            <tr>
+              <td>Traditional:</td>
+              <td><%= r.traditional %></td>
+            </tr>
+            <tr>
+              <td>Definition:</td>
+              <td><%= r.english1 %></td>
+            </tr>
+            <% unless r.english2.blank? %>
+              <tr>
+                <td>Alternate Definition:</td>
+                <td><%= r.english2 %></td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </article>
+    </div>
+    <% end %>
+  <% end %>
+</section>
+
