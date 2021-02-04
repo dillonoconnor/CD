@@ -10,7 +10,7 @@
       <article class="media">
         <div class="media-left">
           <p class="title"><%= r.simplified %></p>
-          <p class="subtitle"><%= r.pinyin %></p>
+          <p class="subtitle"><%= Pinny.to_pinyin(r.pinyin) %></p>
         </div>
         <div class="media-content">
           <table class="table">
