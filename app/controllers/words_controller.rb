@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   def main
+    @wotd = Wotd.last
     @word = Word.new
   end
 

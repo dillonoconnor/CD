@@ -1,6 +1,33 @@
 <section class="section">
   <div class="columns">
     <div class="column is-half is-offset-one-quarter">
+      <div class="box">
+        <h1 class="title">Word of the Day</h1>
+        <article class="media">
+          <div class="media-left">
+            <p class="title"><%= @wotd.simplified %></p>
+            <p class="subtitle"><%= Pinny.to_pinyin(@wotd.pinyin) %></p>
+          </div>
+          <div class="media-content">
+            <table class="table">
+              <tr>
+                <td>Traditional:</td>
+                <td><%= @wotd.traditional %></td>
+              </tr>
+              <tr>
+                <td>Definition:</td>
+                <td><%= @wotd.english1 %></td>
+              </tr>
+              <% unless @wotd.english2.blank? %>
+                <tr>
+                  <td>Alternate Definition:</td>
+                  <td><%= @wotd.english2 %></td>
+                </tr>
+              <% end %>
+            </table>
+          </div>
+        </article>
+      </div>
       <%= form_with model: @word, local: true do |f| %>
         <div class="level">
           <div class="level-left is-flex-grow-1">

@@ -1,0 +1,4 @@
+:schedule:
+  update_wotd:
+    cron: '0 0 * * *'
+    class: WotdJob
