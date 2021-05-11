@@ -6,6 +6,6 @@ class WordsController < ApplicationController
 
   def search
     @word = params[:word][:search_term]
-    @result = Word.basic_search(@word)
+    @result = Word.search_by_word(@word)
   end
 end

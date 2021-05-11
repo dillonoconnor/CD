@@ -6,7 +6,6 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
 # ENV variable management
 gem 'figaro', '~> 1.2'
 # Use Puma as the app server
@@ -59,10 +58,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "sidekiq", "~> 6.1"
 
-gem 'textacular', '~> 5.0'
 
 gem 'bulma-rails', '~> 0.9.1'
 
 gem 'pinny', '~> 0.1.2'
 
 gem "sidekiq-scheduler", "~> 3.0"
+
+gem "pg", "~> 1.1.4"
+
+gem "pg_search", "~> 2.3"
